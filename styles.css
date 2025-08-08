@@ -1,0 +1,181 @@
+/* ตั้งค่าพื้นฐานของหน้า */
+body {
+  font-family: 'Kanit', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url('background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* คอนเทนเนอร์หลัก */
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+}
+
+/* ข้อความหัวข้อ */
+.title {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+/* รูปภาพหลัก */
+#mainImage {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 16px auto;
+  border-radius: 12px;
+  transition: width 0.3s ease, transform 0.3s ease;
+}
+
+/* คอนเทนเนอร์สำหรับปุ่ม */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+/* สไตล์ปุ่มทั่วไป */
+.button {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 12px 32px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ปุ่ม "ไม่" */
+#noButton {
+  background: linear-gradient(to right, #6b7280, #4b5563);
+}
+
+#noButton:hover {
+  transform: scale(1.1) rotate(-3deg);
+  background: linear-gradient(to right, #9ca3af, #6b7280);
+  box-shadow: 0 4px 10px rgba(107, 114, 128, 0.4);
+}
+
+/* ปุ่ม "ชอบ" */
+#loveButton {
+  background: linear-gradient(to right, #fbcfe8, #f9a8d4);
+}
+
+#loveButton:hover {
+  transform: scale(1.1) rotate(3deg);
+  background: linear-gradient(to right, #ff80b3, #ff99cc);
+  box-shadow: 0 4px 10px rgba(255, 128, 179, 0.4);
+}
+
+/* ปุ่ม "ชอบ" เมื่อย้ายไปใต้ภาพ */
+.centered-love-button {
+  margin-top: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(to right, #f9a8d4, #fbcfe8);
+  padding: 14px 36px;
+  font-size: 22px;
+  box-shadow: 0 4px 10px rgba(255, 128, 179, 0.3);
+}
+
+/* ปุ่ม "เย่" */
+#yayButton {
+  background: linear-gradient(to right, #fefcbf, #fde68a); /* โทนเหลืองพาสเทลเพื่อความรู้สึกดีใจ */
+  margin-top: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#yayButton:hover {
+  transform: scale(1.1) rotate(3deg);
+  background: linear-gradient(to right, #fef08a, #facc15);
+  box-shadow: 0 4px 10px rgba(250, 204, 21, 0.4);
+}
+
+/* ปุ่ม "ต่อไป" */
+#nextButton {
+  background: linear-gradient(to right, #a5b4fc, #60a5fa); /* โทนฟ้าพาสเทล */
+  margin-top: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#nextButton:hover {
+  transform: scale(1.1) rotate(3deg);
+  background: linear-gradient(to right, #c7d2fe, #93c5fd);
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
+}
+
+/* ข้อความในหน้า lovePage, noPage, และ finalPage */
+h1 {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #333;
+  margin: 16px 0;
+}
+
+/* คลาส hidden */
+.hidden {
+  display: none;
+}
+
+/* รูปภาพทั่วไปในหน้า lovePage, noPage, และ finalPage */
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* การปรับแต่งสำหรับหน้าจอเล็ก */
+@media (max-width: 640px) {
+  .title {
+    font-size: 22px;
+  }
+  .button {
+    font-size: 18px;
+    padding: 10px 24px;
+  }
+  .centered-love-button {
+    font-size: 20px;
+    padding: 12px 30px;
+  }
+  #yayButton {
+    font-size: 18px;
+    padding: 10px 24px;
+  }
+  #nextButton {
+    font-size: 18px;
+    padding: 10px 24px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+}

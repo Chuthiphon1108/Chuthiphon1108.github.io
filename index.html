@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://www.iconpacks.net/icons/1/free-heart-icon-431-thumb.png"
+      type="image/x-icon"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <title>ส่งถามคุณ</title>
+  </head>
+  <body>
+    <!-- หน้าแรก -->
+    <div id="mainPage" class="container">
+      <span id="mainTitle" class="title">คุณอ๋อมเริ่มชอบผมอ้ะยาง?</span>
+      <img id="mainImage" src="doyou.png" alt="Do you?" />
+
+      <!-- ปุ่มกด -->
+      <div class="button-container">
+        <button
+          id="noButton"
+          class="button"
+          onmouseover="changeImage('hm.png')"
+          onclick="handleNoClick()"
+        >
+          ไม่
+        </button>
+        <button
+          id="loveButton"
+          class="button"
+          onmouseover="changeImage('pinkping.png')"
+          onmouseout="resetImage()"
+          onclick="showPage('lovePage')"
+        >
+          ชอบ
+        </button>
+      </div>
+    </div>
+
+    <!-- หน้ากด ชอบ -->
+    <div id="lovePage" class="container hidden">
+      <h1 id="loveTitle">กฟหสวก่ฟหกา่กหาสฟ แงงนารักที่สุดเลยย</h1>
+      <img id="loveImage" src="loveu.png" alt="Love You" />
+      <button id="yayButton" class="button yay-button" onclick="handleYayClick()">เย่</button>
+    </div>
+
+    <!-- หน้าถ้ายังจะกด No เรื่อยๆ -->
+    <div id="noPage" class="container hidden">
+      <img src="die.png" alt="Die" />
+    </div>
+
+    <!-- หน้าใหม่หลังกดต่อไป -->
+    <div id="finalPage" class="container hidden">
+      <h1 id="finalTitle">ชอบเหมือนกันนะคั้บ</h1>
+      <img id="finalImage" src="happy.png" alt="Happy" />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
